@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>
-        /**a super tag do php por onde colocamos os codigos  <?php ?> */
+        /**a super tag php, por onde colocamos os codigos  <?php ?> */
         <?php
                 /** visualizar textos
                  * echo
