@@ -1,47 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testando códigos</title>
+    <title>Short tag</title>
 </head>
 <body>
-    
-    <h1>Hora e data</h1>
-    <?php 
-            /* a função date diz a data atual do sistema 
-                    D para dia da semana
-                    d para data
-                    M para mês
-                    Y para ano
-                    y para o ano com dois digitos
-                    
-                a concatenação é feita com o ponto (.) e nao com o sinal de mais (+) como em outras linguagens
+    <!-- Short open tag 
+     para usar short open tag, é necessário habilitar a diretiva short_open_tag no arquivo php.ini, caso contrário, o código não será interpretado corretamente.
+     passos para habilitar short open tag:
+     1. Abra no vscode o arquivo php.ini (geralmente localizado na pasta de instalação do PHP: C:\xampp\php\php.ini).
+     2. Procure pela diretiva short_open_tag no vscode (Ctrl + F) e altere o valor de Off para On.  
+     3. Salve o arquivo php.ini e reinicie o servidor web (Apache) para que as alterações tenham efeito.
+     4. Agora você pode usar short open tag no seu código PHP, como mostrado abaixo.
 
-                a função date diz tambem a hora atual do sistema 
-                    G para hora em formato 24h
-                    g para hora em formato 12h
-                    i para minutos
-                
-                    s para segundos
-                    a para am ou pm
-                    t para o total de dias do mês
-                    
-                    T para o fuso horário do sistema
 
-            */
-        
-        # para definir o fuso horário do sistema, usamos a função date_default_timezone_set() e passamos como parâmetro o fuso horário desejado
-        date_default_timezone_set("Africa/Luanda");
+     Atençao:
+        Não é recomendado o uso de short open tag, pois pode causar problemas de compatibilidade em diferentes ambientes de servidor. É preferível usar a tag completa <?php ?> para garantir que o código seja interpretado corretamente em qualquer configuração do PHP.
+    -->
 
-        $nome = "Jonas Giona";
-        echo "Olá, $nome, tudo bem?". "<br>"; 
-
-        # a função date() retorna a data e hora atual do sistema, e podemos formatar a saída usando os caracteres de formatação mencionados acima
-        /**o que inicialmente aparece nao é a hora ou data atual, mas sim a hora e data do servidor, que pode estar em outro fuso horário, por isso é importante definir o fuso horário correto antes de usar a função date()*/
-        echo "Hoje é dia ". date("d / M / Y") . "<br>";
-        echo "e já sao " . date("G:i:s T") . "<br>";
-        echo " ou " . date("g:i:s a") . "<br>";
+    <?
+        phpinfo();
     ?>
 </body>
 </html>
