@@ -39,6 +39,12 @@
 
                 $nome_completo_cliente = "Gustavo Almeida";
          */
+
+        $nome = "Jonas";
+        $sobrenome = "Sambo";
+        const Naturalidade = "Angola";
+
+        echo "O Senhor se chama $nome $sobrenome, e você és de " . Naturalidade;
     ?>
 </body>
 </html>
